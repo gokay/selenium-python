@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
 import time
@@ -13,6 +14,7 @@ browser = webdriver.Chrome("C:\\exes\\chromedriver.exe")
 # ABI / INFORM 
 try:
     browser.get('https://search.proquest.com/abicomplete/index?accountid=13638')
+    
     time.sleep(5)
     print(browser.title)
     print(browser.current_url)
